@@ -14,6 +14,7 @@ export const data = [
         "Earth's mightiest heroes must come together and learn to fight as a team if they are going to stop the mischievous Loki and his alien army from enslaving humanity.",
       Language: "English, Russian, Hindi",
       Country: "USA",
+      
       Awards: "Nominated for 1 Oscar. Another 38 wins & 79 nominations.",
       Poster:
         "https://m.media-amazon.com/images/M/MV5BNDYxNjQyMjAtNTdiOS00NGYwLWFmNTAtNThmYjU5ZGI2YTI1XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX300.jpg",

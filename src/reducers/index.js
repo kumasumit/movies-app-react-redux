@@ -1,11 +1,14 @@
+
 import {  ADD_MOVIES, ADD_TO_FAVOURITES, REMOVE_FROM_FAVOURITES, SET_SHOW_FAVOURITES } from "../actions";
+import { combineReducers } from "redux";
 
 const initialMovieState = {
     list: [], //this has the list of all the movies
     favourites: [],//this has all the list of favourites movies 
     showFavourites: false   
-}
-export default function movies(state=initialMovieState, action){
+};
+export function movies(state=initialMovieState, action){
+    // console.log("Movies Reducer");
     // if(action.type===ADD_MOVIES){
     //     return {
     //         ...state,
@@ -44,7 +47,31 @@ export default function movies(state=initialMovieState, action){
                 showFavourites: action.val
             }       
         default:
-            return state;        
+            return state ;     
     }
-}
+};
+//Search Reducer
+const initialSearchState = {
+    result:{}
+};
+export function search(state=initialSearchState, action){
+    // console.log("Search Reducer")
+   return state;
+};
+// const initialRootState = {
+//     movies: initialMovieState,
+//     search: initialSearchState
+// };
+// export default function rootReducer (state = initialRootState, action)
+// {
+//     return {
+//         movies: movies(state.movies, action),
+//         search: search(state.search, action)
+//     }
 
+// };
+//this is how redux internally implements combineReducers
+export default combineReducers({
+   movies: movies, //movies is managed by movie reducer
+   search: search  //search is managed by search reducer
+});
